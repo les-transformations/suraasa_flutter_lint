@@ -10,21 +10,21 @@ bool _filterNode(InstanceCreationExpression node) {
       elementName == "CupertinoPageRoute";
 }
 
-class SuraasaPageRouteLint extends DartLintRule {
-  SuraasaPageRouteLint() : super(code: _code);
+class PreferSuraasaPageRoute extends DartLintRule {
+  PreferSuraasaPageRoute() : super(code: _code);
 
   /// Metadata about the warning that will show-up in the IDE.
   /// This is used for `// ignore: code` and enabling/disabling the lint
   static const _code = LintCode(
-    name: 'suraasa_page_route_lint',
+    name: 'prefer_suraasa_page_route',
     problemMessage:
         'Not using SuraasaPageRoute interferes with screen name tracking.',
     correctionMessage:
         'Use SuraasaPageRoute instead of MaterialPageRoute or CupertinoPageRoute.',
-    errorSeverity: ErrorSeverity.ERROR,
-    uniqueName: 'suraasa_page_route_lint',
+    errorSeverity: ErrorSeverity.WARNING,
+    uniqueName: 'prefer_suraasa_page_route',
     url:
-        'https://github.com/les-transformations/suraasa_flutter_lint/README.md',
+        'https://github.com/les-transformations/suraasa_flutter_lint#prefer_suraasa_page_route',
   );
 
   @override
